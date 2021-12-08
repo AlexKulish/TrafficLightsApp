@@ -27,6 +27,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7m-yw-kUT"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ymq-3r-dXp">
                                 <rect key="frame" x="139" y="123" width="150" height="510"/>
@@ -65,6 +68,12 @@
                             <constraint firstItem="Ymq-3r-dXp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="iR9-kE-YAy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="9VF-Hg-BvV" id="TIJ-U2-YaX"/>
+                        <outlet property="redLightView" destination="mBr-K3-kon" id="5WR-FF-2Lk"/>
+                        <outlet property="startButton" destination="jQ5-wd-v4y" id="iwB-sS-MeM"/>
+                        <outlet property="yellowLightView" destination="F7w-ZK-F3n" id="j9a-C5-EJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
