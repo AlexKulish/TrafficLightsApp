@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
-    
     @IBOutlet var startButton: UIButton!
     
     var counterOfClick = 0
@@ -26,13 +25,15 @@ class ViewController: UIViewController {
         startButton.layer.cornerRadius = 20
     }
     
-    @IBAction func pressedButton() {
-        startButton.setTitle("NEXT", for: .normal)
-        counterOfClick += 1
-        
+    override func viewDidLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.layer.bounds.width / 2
         yellowLightView.layer.cornerRadius = yellowLightView.layer.bounds.width / 2
         greenLightView.layer.cornerRadius = greenLightView.layer.bounds.width / 2
+    }
+    
+    @IBAction func pressedButton() {
+        startButton.setTitle("NEXT", for: .normal)
+        counterOfClick += 1
         
         if counterOfClick % 3 == 1 {
             redLightView.alpha = 1
